@@ -13,11 +13,11 @@ public class Game {
 
         String repeat = "y";
         while (repeat.equals("y")) {
-            System.out.printf("Make your bet: ");
+            System.out.print("Make your bet: ");
             int bet = in.nextInt();
             in.nextLine();
             while (bet > sum) {
-                System.out.printf("Too much, repeat your bet: ");
+                System.out.print("Too much, repeat your bet: ");
                 bet = in.nextInt();
                 in.nextLine();
             }
