@@ -4,7 +4,14 @@ public class Set {
         return switch (firstResult) {
             case 2, 3, 12 -> Game.Result.LOSS;
             case 7, 11 -> Game.Result.WIN;
-            default-> nextRoll(firstResult);
+            //default-> nextRoll(firstResult);
+            default-> {
+                int diceResult = rollDice();
+                while (diceResult != firstResult && diceResult != 7) {
+                    diceResult = rollDice();
+                }
+                yield  diceResult == firstResult ? Game.Result.WIN : Game.Result.LOSS;
+            }
         };
     }
 
