@@ -14,14 +14,14 @@ public class Set {
             }
         };
     }
-
-    private static Game.Result nextRoll(int firstResult){
-        int diceResult = rollDice();
-        while (diceResult != firstResult && diceResult != 7) {
-            diceResult = rollDice();
-        }
-        return diceResult == firstResult ? Game.Result.WIN : Game.Result.LOSS;
-    }
+//
+//    private static Game.Result nextRoll(int firstResult){
+//        int diceResult = rollDice();
+//        while (diceResult != firstResult && diceResult != 7) {
+//            diceResult = rollDice();
+//        }
+//        return diceResult == firstResult ? Game.Result.WIN : Game.Result.LOSS;
+//    }
 
     private static int rollDice() {
         System.out.print("Roll dice (press Enter):");
